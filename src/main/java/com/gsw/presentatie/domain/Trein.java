@@ -3,6 +3,7 @@ package com.gsw.presentatie.domain;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,17 +25,18 @@ public class Trein {
 	private List<Wagon> wagons;
 	
 	@Id
+	@Column(name = "train_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long trein_id;
+	private long id;
 	
 	private String merk;
 
-	public long getTrein_id() {
-		return trein_id;
+	public long getId() {
+		return id;
 	}
 
-	public Trein setTrein_id(long id) {
-		this.trein_id = id;
+	public Trein setId(final long id) {
+		this.id = id;
 		return this;
 	}
 
@@ -42,7 +44,7 @@ public class Trein {
 		return merk;
 	}
 
-	public Trein setMerk(String merk) {
+	public Trein setMerk(final String merk) {
 		this.merk = merk;
 		return this;
 	}
@@ -51,7 +53,7 @@ public class Trein {
 		return wagons;
 	}
 
-	public void setWagons(List<Wagon> wagons) {
+	public void setWagons(final List<Wagon> wagons) {
 		this.wagons = wagons;
 	}
 }

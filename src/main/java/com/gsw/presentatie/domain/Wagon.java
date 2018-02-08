@@ -1,5 +1,6 @@
 package com.gsw.presentatie.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,17 +10,18 @@ import javax.persistence.Id;
 public class Wagon {
 
 	@Id
+	@Column(name = "wagon_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long wagon_id;
+	private long id;
 	
 	private String name;
 
-	public long getWagon_id() {
-		return wagon_id;
+	public long getId() {
+		return id;
 	}
 
-	public Wagon setWagon_id(long id) {
-		this.wagon_id = id;
+	public Wagon setId(final long id) {
+		this.id = id;
 		return this;
 	}
 
@@ -27,7 +29,7 @@ public class Wagon {
 		return name;
 	}
 
-	public Wagon setName(String name) {
+	public Wagon setName(final String name) {
 		this.name = name;
 		return this;
 	}

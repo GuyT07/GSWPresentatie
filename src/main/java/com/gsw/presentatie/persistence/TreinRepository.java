@@ -3,11 +3,11 @@ package com.gsw.presentatie.persistence;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.gsw.presentatie.domain.Trein;
 
-@Component
+@Repository
 public interface TreinRepository extends CrudRepository <Trein, Long> {
 	
 	List<Trein> findByMerkContaining(final String brand);

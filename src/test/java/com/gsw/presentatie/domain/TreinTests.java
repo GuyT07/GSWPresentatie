@@ -13,8 +13,8 @@ public class TreinTests {
 	@Test
 	public void getId_succeeds(){
 		Trein trein = new Trein();
-		trein.setTrein_id(1L);
-		assertEquals(1L, trein.getTrein_id());
+		trein.setId(1L);
+		assertEquals(1L, trein.getId());
 	}
 
 	@Test
